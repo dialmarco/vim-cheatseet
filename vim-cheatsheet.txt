@@ -1,0 +1,118 @@
+Movement keys
+=============
+- h => left
+- j => down
+- k => up
+- l => right
+- + => Go to first character in next line
+- <Enter> => Go to first character in next line
+- - => Go to first character if previous line
+- ^ => Moves to the first character in current line
+- <number>| => Moves to the <number> column in the current line
+- {, ( => Move to end of sentence
+- }, ) => Move to beginning of sentence
+- `` => Go back of the previous mark or context after a move
+
+- 0 => beginning of the line
+- $ => end of line
+- w => word forward, symbols count as words
+- W => word forward, symbols is part of the word
+- e => to end of word, symbols count as part of the word
+- E => to end of word, symbols do not count as part of the word
+- b => word back, symbol count as words
+- B => word back, symbol is part of the word
+
+- G => end of file
+- (line number)G => go to line
+- gg => First line
+
+- /regexp => goes to regular expression
+- n => repeat search forward
+- N => repeat search backward
+
+- f<character> => go to next instance of character
+- F<character> => go to previous instance of character
+- t<character> => go to character before next instance of character
+- T<character> => go to character after previous instance of character
+- ; => repeat find
+
+- <Ctrl> d => Down half page
+- <Ctrl> p => Up half page
+- <Ctrl> f => Down full page
+- <Ctrl> b => Up full page
+
+- z + enter => brings current line to top of the screen
+- z. => move current line to center of screen
+- z- => move current line to bottom of the screen
+- <number> z (Enter, ., or - ) bring the line number to the (top, center, or end of the screen)
+
+- H => Move to top line on the screen
+- M => Move to middle line on the screen
+- L => Move to bottom line on the screen
+- <number> (H,L) => moves <number> lines (under, over) the (top, bottom)
+
+Edits
+======
+- i => insert
+- I => insert beginning of line
+- a => append
+- A => Append end of line
+- o => Edit new line under current line
+- O => Edit new line over current line
+- d + movement command => deletes to
+- dd => delete line
+- D => delete to end of line (same as d$)
+- c + movement command => changes to
+- cc => changes line
+- C => changes to end of line (same as c$)
+- y + movement command => yank (copy)
+- yy => copies line
+- Y => copies line (same as yy)
+- r => replace a letter
+- R => goes into replace mode
+- s => substitute (2s substitute two letters)
+- S => substitues full line (same as cc)
+- ~ => Uppercase to lowercase and vice versa
+- x => deletes a character
+- p => paste after
+- P => paste before
+- J => joins two lines
+
+- . => repeat command
+- u => undo
+- Command+z => undo
+- Command+Z => redo
+
+- "<letter> = named buffer
+- "ayy =>  copy line into named buffer 'a'
+- "ap =>  paste from named buffer 'a'
+- "a5dd => delete 5 lines into buffer a
+
+- m<letter> => bookmark position in letter
+- `<letter> => go to bookmark
+
+(command) (number) (text object)
+================================
+d5w => delete 5 words
+y2B => yank 2 big words backwards
+
+Useful sequences
+================
+- xp => transposes two letters
+- 10i* => Adds 10 * characters
+- 5r= => replaces 5 characters with =
+- 3s => replaces three characters
+- J. => Joins three lines (Join line + repear command)
+- =4j => indent 5 lines, the current + 4
+- d/envelope => deletes to envelope
+- d2fa => deletes to the second 'a'
+- gg=G`` => gg (go first line) =G (indent to end of line) `` (go to starting position)
+- dL => delete to end of the screen
+
+Ex commands
+===========
+:nohlsearch => do not highlight search 
+:set nohlsearch => do not highlight search 
+:set hlsearch => highlight search
+
+
